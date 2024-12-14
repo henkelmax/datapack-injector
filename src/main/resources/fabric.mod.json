@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "datapack_injector",
+  "version": "${mod_version}",
+  "name": "Datapack Injector",
+  "description": "Datapack Injector",
+  "authors": [
+    "Max Henkel"
+  ],
+  "contact": {
+    "website": "https://modrepo.de"
+  },
+  "license": "All Rights Reserved",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "de.maxhenkel.datapack.DatapackInjector"
+    ]
+  },
+  "mixins": [
+    "datapack_injector.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "${fabric_loader_dependency}",
+    "minecraft": "${minecraft_dependency}"
+  }
+}

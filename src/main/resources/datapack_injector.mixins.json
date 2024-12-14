@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8.4",
+  "package": "de.maxhenkel.datapack.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ServerPacksSourceMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
