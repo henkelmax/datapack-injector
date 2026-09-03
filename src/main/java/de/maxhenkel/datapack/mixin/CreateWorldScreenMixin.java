@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 public class CreateWorldScreenMixin {
 
     @ModifyArg(method = "openCreateWorldScreen", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/packs/repository/PackRepository;<init>([Lnet/minecraft/server/packs/repository/RepositorySource;)V"), index = 0)
-    private static RepositorySource[] openCreateWorldScreen(RepositorySource[] repositorySources, @Local(argsOnly = true, name = "minecraft") Minecraft minecraft) {
+    private static RepositorySource[] openCreateWorldScreen(RepositorySource[] repositorySources, @Local(argsOnly = true) Minecraft minecraft) {
         return DatapackInjector.addDatapackSource(repositorySources, minecraft.directoryValidator());
     }
 

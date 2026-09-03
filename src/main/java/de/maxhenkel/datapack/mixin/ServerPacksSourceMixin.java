@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 public class ServerPacksSourceMixin {
 
     @ModifyArg(method = "createPackRepository(Ljava/nio/file/Path;Lnet/minecraft/world/level/validation/DirectoryValidator;)Lnet/minecraft/server/packs/repository/PackRepository;", at = @At(value = "INVOKE", target = "Lnet/minecraft/server/packs/repository/PackRepository;<init>([Lnet/minecraft/server/packs/repository/RepositorySource;)V"), index = 0)
-    private static RepositorySource[] createPackRepository(RepositorySource[] repositorySources, @Local(argsOnly = true, name = "validator") DirectoryValidator directoryValidator) {
+    private static RepositorySource[] createPackRepository(RepositorySource[] repositorySources, @Local(argsOnly = true) DirectoryValidator directoryValidator) {
         return DatapackInjector.addDatapackSource(repositorySources, directoryValidator);
     }
 
