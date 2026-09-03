@@ -6,6 +6,9 @@
   "mixins": [
     "ServerPacksSourceMixin"
   ],
+  "client": [
+    "CreateWorldScreenMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   }

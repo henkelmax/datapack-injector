@@ -1,1 +1,1 @@
-- Added support for 26.1.2
+- Added support for single-player datapack injection
