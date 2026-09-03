@@ -1,1 +1,1 @@
-- Updated to 1.21.11
+- Added support for single-player datapack injection
