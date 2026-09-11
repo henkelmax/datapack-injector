@@ -1,1 +1,1 @@
-- Added support for single-player datapack injection
+- Updated to 26.3
